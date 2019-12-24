@@ -3,9 +3,9 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbrInOrder(n int) {
+	res := []int{}
 	res = append(res, 0)
 	var m = map[rune]int{0: 48, 1: 49, 2: 50, 3: 51, 4: 52, 5: 53, 6: 54, 7: 55, 8: 56, 9: 57}
-	res := []int{}
 	len := 0
 	//Créer le tableau de i
 	if n <= 0 {
@@ -17,10 +17,8 @@ func PrintNbrInOrder(n int) {
 		}
 	}
 	//Trouver la longueur du tableau
-	for index, val := range res {
+	for range res {
 		len++
-		index = index
-		val = val
 	}
 	//Trier le tableau
 	for i := 0; i < len; i++ {
